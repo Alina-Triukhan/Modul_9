@@ -44,5 +44,6 @@ public class Main {
         myLinkedList.clear();
         System.out.println("LL: " + myLinkedList);
         System.out.println("Розмір: " + myLinkedList.size());
+
     }
 }

@@ -85,6 +85,8 @@ public class Main {
 
             myQueue.poll();
             System.out.println(myQueue);
+            myQueue.clear();
+            System.out.println(myQueue);
             System.out.println("________________________________________");
         }
 

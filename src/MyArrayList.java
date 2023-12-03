@@ -71,6 +71,6 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
             result.append(array[i]).append(", ");
         }
         result.append(array[arraySize - 1]).append("]");
-        return "Довжина масиву: " + arraySize + "; " + result.toString();
+        return "Довжина масиву: " + arraySize + "; " + result;
     }
 }

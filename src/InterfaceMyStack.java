@@ -1,5 +1,5 @@
 public interface InterfaceMyStack<T> { //LIFO
-    void push(Object value); //додає елемент в кінець
+    void push(T value); //додає елемент в кінець
     void remove(int index); //видаляє елемент за індексом
     void clear(); //очищає колекцію
     int size(); //повертає розмір колекції

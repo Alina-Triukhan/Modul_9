@@ -1,14 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<Integer> integerMyArrayList = new MyArrayList<>();
         {
+            MyArrayList<Integer> integerMyArrayList = new MyArrayList<>();
+
             integerMyArrayList.add(0);
             integerMyArrayList.add(1);
             integerMyArrayList.add(2);
             integerMyArrayList.add(3);
             integerMyArrayList.add(4);
-            System.out.println(integerMyArrayList);
-            integerMyArrayList.get(4);
             System.out.println(integerMyArrayList);
             integerMyArrayList.add(5);
             integerMyArrayList.add(6);
@@ -23,10 +22,10 @@ public class Main {
             integerMyArrayList.add(15);
             integerMyArrayList.size();
             System.out.println(integerMyArrayList);
+            integerMyArrayList.get(3);
             integerMyArrayList.remove(3);
             System.out.println(integerMyArrayList);
-            integerMyArrayList.remove(0);
-            integerMyArrayList.remove(0);
+            integerMyArrayList.get(3);
             integerMyArrayList.remove(0);
             integerMyArrayList.remove(0);
             integerMyArrayList.remove(0);
@@ -39,7 +38,6 @@ public class Main {
             integerMyArrayList.remove(0);
             integerMyArrayList.remove(0);
             System.out.println(integerMyArrayList);
-            System.out.println("^^^^^^^^^^^^^^^");
             integerMyArrayList.clear();
             integerMyArrayList.size();
             System.out.println(integerMyArrayList);
@@ -56,25 +54,25 @@ public class Main {
             myLinkedList.add("4е");
             myLinkedList.add("5е");
 
-            System.out.println("Розмір: " + myLinkedList.size());
+            myLinkedList.size();
             myLinkedList.get(4);
-            System.out.println("LL: " + myLinkedList);
+            System.out.println(myLinkedList);
             myLinkedList.remove(0);
             myLinkedList.remove(3);
-            System.out.println("LL1: " + myLinkedList);
-            // System.out.print("3: " + myLinkedList.get(3));
+            System.out.println(myLinkedList);
+            // System.out.print("3: " + myLinkedList.get(3)); //Exception
             myLinkedList.get(3);
             myLinkedList.get(1);
             myLinkedList.clear();
-            System.out.println("LL2: " + myLinkedList);
-            System.out.println("Розмір: " + myLinkedList.size());
+            System.out.println(myLinkedList);
+            myLinkedList.size();
             myLinkedList.add("1");
-            System.out.println("LL3: " + myLinkedList);
+            System.out.println(myLinkedList);
+            System.out.println("________________________________________");
         }
         {
-            System.out.println("________________________________________");
-
             MyQueue<Integer> myQueue = new MyQueue<>();
+
             myQueue.add(0);
             myQueue.add(1);
             myQueue.add(2);
@@ -91,6 +89,7 @@ public class Main {
         }
         {
             MyStack<String> myStack = new MyStack<>();
+
             myStack.push("0");
             System.out.println(myStack);
             myStack.push("1");
@@ -111,8 +110,9 @@ public class Main {
         }
         {
             MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
+
             myHashMap.put("abc", 1);
-            System.out.println(myHashMap.get("abc"));
+            myHashMap.get("abc");
             myHashMap.put("ccc", 3);
             myHashMap.put("vvv", 2);
             myHashMap.put("aaa", 67);

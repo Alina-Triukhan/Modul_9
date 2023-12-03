@@ -83,6 +83,7 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
 
     @Override
     public int size() {
+        System.out.println("Розмір списку: " + size);
         return size;
     }
 
@@ -112,9 +113,8 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder("[");
+        StringBuilder result = new StringBuilder("\n[");
         Node<T> current = head;
-
         while (current != null) {
             result.append(current.value);
             if (current.next != null) {
@@ -122,7 +122,6 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
             }
             current = current.next;
         }
-
         result.append("]");
         return result.toString();
     }

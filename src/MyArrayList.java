@@ -41,7 +41,7 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
 
     @Override
     public int size() {
-        System.out.println("Довжина масиву: " + arraySize);
+        System.out.println("Розмір: " + arraySize);
         return arraySize;
     }
 
@@ -64,13 +64,13 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
     @Override
     public String toString() {
         if (arraySize == 0) {
-            return "[]";
+            return "[]  Масив порожній.";
         }
         StringBuilder result = new StringBuilder("[");
         for (int i = 0; i < arraySize - 1; i++) {
             result.append(array[i]).append(", ");
         }
-        result.append(array[arraySize - 1]).append("]");
-        return "Довжина масиву: " + arraySize + "; " + result;
+        result.append(array[arraySize - 1]).append("]  Довжина масиву: ").append(arraySize).append("; ");
+        return  result.toString();
     }
 }

@@ -7,6 +7,7 @@ public class MyHashMap<K, V> implements InterfaceMyHashMap<K, V> {
 
     public MyHashMap() {
         this(CAPASITY);
+        System.out.println("MyHashMap створений\n");
     }
 
     public MyHashMap(int initCapacity) {

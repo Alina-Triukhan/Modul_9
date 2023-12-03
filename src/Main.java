@@ -74,7 +74,7 @@ public class Main {
         {
             System.out.println("________________________________________");
 
-            MyQueue<Integer> myQueue = new MyQueue();
+            MyQueue<Integer> myQueue = new MyQueue<>();
             myQueue.add(0);
             myQueue.add(1);
             myQueue.add(2);

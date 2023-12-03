@@ -1,7 +1,7 @@
 public interface InterfaceMyArrayList<T> {
-    public void add(T item);
-    public void remove(int index);
-    public void clear();
-    public int size();
-    public T get(int index);
+    void add(T item);
+    void remove(int index);
+    void clear();
+    int size();
+    T get(int index);
 }

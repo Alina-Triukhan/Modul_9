@@ -19,6 +19,7 @@ public class MyQueue<T> implements InterfaceMyQueue<T>{
             this.next = null;
         }
     }
+
     @Override
     public void add(T value) {
         Node<T> node = new Node<>(value);
@@ -86,6 +87,6 @@ public class MyQueue<T> implements InterfaceMyQueue<T>{
             current = current.next;
         }
         result.append("]");
-        return "Черга: " + result + ", Довжина черги:" + size;
+        return "Черга: " + result + ", Довжина черги: " + size;
     }
 }

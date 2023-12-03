@@ -1,4 +1,4 @@
-public interface InterfaceMyQueue<T> {
+public interface InterfaceMyQueue<T> { //FIFO
     void add(T value); //додає елемент в кінець
     void clear(); //очищає колекцію
     int size(); //повертає розмір колекції

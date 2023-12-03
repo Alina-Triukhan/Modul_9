@@ -51,10 +51,6 @@ public class Main {
 
         System.out.println("________________________________________");
 
-//        MyLL<Integer> mi = new MyLL<>();
-//        mi.add(1);
-//        mi.add(2);
-//        mi.add(3);
-//        System.out.println("MyLL: " + mi);
+
     }
 }

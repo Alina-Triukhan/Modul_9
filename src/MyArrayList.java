@@ -2,17 +2,18 @@ import java.util.Arrays;
 
 public class MyArrayList<T> implements InterfaceMyArrayList<T> {
     private final int CAPACITY = 10;
-    private final int LOWER = 4;
-    private int arraySize = 0;
-    private Object[] array = new Object[CAPACITY];
+    private int arraySize;
+    private Object[] array;
     public MyArrayList() {
         System.out.println("MyArrayList створений\n");
+        this.array = new Object[CAPACITY];
+        this.arraySize = 0;
     }
 
     @Override
     public void add(T item) {
-        if (arraySize == array.length - 1)
-            resize(array.length * 2/3);
+        if (arraySize == array.length)
+            resize(array.length * 2);
         array[arraySize++] = item;
     }
 
@@ -25,7 +26,7 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
             array[i] = array[i + 1];
         array[arraySize] = null;
         arraySize--;
-        if (array.length > CAPACITY && arraySize < array.length / LOWER)
+        if (array.length > CAPACITY && arraySize < array.length / 4)
             resize(array.length / 2);
     }
 
@@ -40,6 +41,7 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
 
     @Override
     public int size() {
+        System.out.println("Довжина масиву: " + arraySize);
         return arraySize;
     }
 
@@ -50,13 +52,26 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
         } else {
             @SuppressWarnings("unchecked")
             T arrayElement = (T) array[index];
+            System.out.println("Елемент з індексом " + index + ": " + array[index]);
             return arrayElement;
         }
     }
 
     private void resize(int newLength) {
         Object[] newArray = new Object[newLength];
-        System.arraycopy(array, 0, newArray, 0, arraySize);
-        array = newArray;
+        array = Arrays.copyOf(array, newLength);
+    }
+
+    @Override
+    public String toString() {
+        if (arraySize == 0) {
+            return "[]";
+        }
+        StringBuilder result = new StringBuilder("[");
+        for (int i = 0; i < arraySize - 1; i++) {
+            result.append(array[i]).append(", ");
+        }
+        result.append(array[arraySize - 1]).append("]");
+        return "Довжина масиву: " + arraySize + "; " + result.toString();
     }
 }

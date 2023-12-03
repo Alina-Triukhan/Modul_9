@@ -1,28 +1,49 @@
 public class Main {
     public static void main(String[] args) {
-//        MyArrayList<Integer> integerMyArrayList = new MyArrayList<>();
-//
-//        integerMyArrayList.add(7);
-//        integerMyArrayList.add(36);
-//        integerMyArrayList.add(17);
-//        integerMyArrayList.add(2);
-//        integerMyArrayList.add(655);
-//
-//
-//        for (int i = 0; i < integerMyArrayList.size(); i++) {
-//            System.out.println(integerMyArrayList.get(i));
-//        }
-//        System.out.println("4-e: " + integerMyArrayList.get(4));
-//        integerMyArrayList.remove(3);
-//        System.out.println("-------------");
-//        for (int i = 0; i < integerMyArrayList.size(); i++) {
-//            System.out.println(integerMyArrayList.get(i));
-//        }
-//        System.out.println("size: " + integerMyArrayList.size());
-//        integerMyArrayList.clear();
-//        System.out.println("size: " + integerMyArrayList.size());
-//        System.out.println("3-e: " + integerMyArrayList.get(3));
+        MyArrayList<Integer> integerMyArrayList = new MyArrayList<>();
 
+        integerMyArrayList.add(0);
+        integerMyArrayList.add(1);
+        integerMyArrayList.add(2);
+        integerMyArrayList.add(3);
+        integerMyArrayList.add(4);
+        System.out.println(integerMyArrayList);
+        integerMyArrayList.get(4);
+        System.out.println(integerMyArrayList);
+        integerMyArrayList.add(5);
+        integerMyArrayList.add(6);
+        integerMyArrayList.add(7);
+        integerMyArrayList.add(8);
+        integerMyArrayList.add(9);
+        integerMyArrayList.add(10);
+        integerMyArrayList.add(11);
+        integerMyArrayList.add(12);
+        integerMyArrayList.add(13);
+        integerMyArrayList.add(14);
+        integerMyArrayList.add(15);
+        integerMyArrayList.size();
+        System.out.println(integerMyArrayList);
+        integerMyArrayList.remove(3);
+        System.out.println(integerMyArrayList);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        integerMyArrayList.remove(0);
+        System.out.println(integerMyArrayList);
+        System.out.println("^^^^^^^^^^^^^^^");
+        integerMyArrayList.clear();
+        integerMyArrayList.size();
+        System.out.println(integerMyArrayList);
+        //integerMyArrayList.get(3);
         System.out.println("_______________________________");
 
         MyLinkedList<String> myLinkedList = new MyLinkedList<>();

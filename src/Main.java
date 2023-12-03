@@ -89,6 +89,26 @@ public class Main {
             System.out.println(myQueue);
             System.out.println("________________________________________");
         }
+        {
+            MyStack<String> myStack = new MyStack<>();
+            myStack.push("0");
+            System.out.println(myStack);
+            myStack.push("1");
+            myStack.push("2");
+            myStack.push("3");
+            System.out.println(myStack);
+            myStack.size();
+            myStack.peek();
+            System.out.println(myStack);
+            myStack.pop();
+            System.out.println(myStack);
+            myStack.peek();
+            myStack.remove(2);
+            System.out.println(myStack);
+            myStack.clear();
+            System.out.println(myStack);
+            System.out.println("________________________________________");
+        }
 
     }
 }

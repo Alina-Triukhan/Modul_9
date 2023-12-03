@@ -45,7 +45,8 @@ public class Main {
             System.out.println(integerMyArrayList);
             //integerMyArrayList.get(3);
             System.out.println("_______________________________");
-
+        }
+        {
             MyLinkedList<String> myLinkedList = new MyLinkedList<>();
 
             myLinkedList.add("0е");
@@ -70,9 +71,22 @@ public class Main {
             myLinkedList.add("1");
             System.out.println("LL3: " + myLinkedList);
         }
+        {
+            System.out.println("________________________________________");
 
-        System.out.println("________________________________________");
+            MyQueue<Integer> myQueue = new MyQueue();
+            myQueue.add(0);
+            myQueue.add(1);
+            myQueue.add(2);
+            System.out.println(myQueue);
+            myQueue.size();
+            myQueue.peek();
+            System.out.println(myQueue);
 
+            myQueue.poll();
+            System.out.println(myQueue);
+            System.out.println("________________________________________");
+        }
 
     }
 }

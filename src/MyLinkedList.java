@@ -1,5 +1,5 @@
 public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
-    private int size = 0;
+    private int size;
     private Node<T> head;
     private Node<T> last;
 

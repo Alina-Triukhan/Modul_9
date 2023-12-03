@@ -58,7 +58,6 @@ public class MyArrayList<T> implements InterfaceMyArrayList<T> {
     }
 
     private void resize(int newLength) {
-        Object[] newArray = new Object[newLength];
         array = Arrays.copyOf(array, newLength);
     }
 

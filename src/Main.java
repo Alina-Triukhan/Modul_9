@@ -109,6 +109,39 @@ public class Main {
             System.out.println(myStack);
             System.out.println("________________________________________");
         }
+        {
+            MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
+            myHashMap.put("abc", 1);
+            System.out.println(myHashMap.get("abc"));
+            myHashMap.put("ccc", 3);
+            myHashMap.put("vvv", 2);
+            myHashMap.put("aaa", 67);
+            myHashMap.put("att", 4);
+            myHashMap.put("rcc", 3);
+            myHashMap.put("evv", 20);
+            myHashMap.put("eaa", 11);
+            myHashMap.put("bba", 3);
+            myHashMap.put("qwe", 5);
+            myHashMap.put("wer", 60);
+            myHashMap.put("qwu", 14);
+            myHashMap.put("115", 0);
 
+//            myHashMap.put("q2e", 5);
+//            myHashMap.put("w3r", 60);
+//            myHashMap.put("q4u", 14);
+//            myHashMap.put("1t5", 4);
+//            myHashMap.put("qdf", 5);
+//            myHashMap.put("w3e", 64);
+//            myHashMap.put("13u", 14);
+//            myHashMap.put("145", 0);
+
+            System.out.println(myHashMap);
+            myHashMap.size();
+            myHashMap.get("rcc");
+            myHashMap.remove("att");
+            System.out.println(myHashMap);
+            myHashMap.clear();
+            System.out.println(myHashMap);
+        }
     }
 }

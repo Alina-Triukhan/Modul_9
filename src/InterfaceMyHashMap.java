@@ -3,5 +3,5 @@ public interface InterfaceMyHashMap<K, V> {
     void remove(K key); //видаляє пару за ключем
     void clear(); //очищає колекцію
     int size(); //повертає розмір колекції
-    V get(K key); //повертає значення (Object value) за ключем
+    V get(K key); //повертає значення (V value) за ключем
 }

@@ -17,21 +17,13 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
         public T getValue() {
             return value;
         }
-
-        @Override
-        public String toString() {
-            return "Node{ value= " + value + ", next= " + next + '}';
-        }
-
-//////////// Щоб вивести список з останнього елемента по попередньому////////////
-//        @Override
-//        public String toString() {
-//            return "Node{ value= " + value + ", prev= " + prev + '}';
-//        }
     }
 
     public MyLinkedList() {
-        System.out.println("MyLinkedList створений");
+        System.out.println("MyLinkedList створений\n");
+        this.head = null;
+        this.last = null;
+        this.size = 0;
     }
 
     @Override
@@ -85,12 +77,6 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
 
     @Override
     public void clear() {
-        Node<T> currentNode = head.next;
-        while (currentNode != null) {
-            currentNode.value = null;
-            currentNode.prev = null;
-            currentNode = currentNode.next;
-        }
         head = last = null;
         size = 0;
     }
@@ -108,33 +94,36 @@ public class MyLinkedList<T> implements InterfaceMyLinkedList<T> {
         //Намагалась прискорити пошук
         if (index <= size / 2) {
             Node<T> target = head;
-            for (int i = 0; i < index; i++) {
+            int i;
+            for (i = 0; i < index; i++) {
                 target = target.next;
             }
+            System.out.println("Елемент з індексом " + i + ": " + target.getValue());
             return target.getValue();
         } else {
             Node<T> target = last;
-            for (int i = size - 1; i > index; i--)
+            int i;
+            for (i = size - 1; i > index; i--)
                 target = target.prev;
+            System.out.println("Елемент з індексом " + i + ": " + target.getValue());
             return target.getValue();
         }
     }
 
     @Override
     public String toString() {
-        return "MyLinkedList (next){" +
-                "size=" + size +
-                "\n head:  " + head +
-                "}\n";
+        StringBuilder result = new StringBuilder("[");
+        Node<T> current = head;
+
+        while (current != null) {
+            result.append(current.value);
+            if (current.next != null) {
+                result.append(" <-> ");
+            }
+            current = current.next;
+        }
+
+        result.append("]");
+        return result.toString();
     }
-
-////////////Щоб вивести список з останнього елемента по попередньому////////////
-
-//    @Override
-//    public String toString() {
-//        return "MyLinkedList (prev){" +
-//                "size=" + size +
-//                "\n last:  " + last +
-//                "}\n";
-//    }
 }
